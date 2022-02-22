@@ -21,7 +21,7 @@ class App extends Component {
         });
         return (
             <div className="tc">
-                <h1 className="f2">My Malakismenoi Friends</h1>
+                <h1 className="f2"><a href='http://localhost:3000/'>My Random Friends</a></h1>
                 <SearchBox searchChange={this.onSearchChange} />
                 <CardList robots={filteredMalakes} />
             </div>    
