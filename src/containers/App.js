@@ -3,6 +3,7 @@ import CardList from "../components/CardList";
 import SearchBox from '../components/SearchBox'
 import Scroll from "../components/Scroll";
 import './App.css';
+import { ApiConfig } from "../ApiConfig";
 
 class App extends Component {
     constructor(){
@@ -13,7 +14,8 @@ class App extends Component {
         }
     }
     componentDidMount() {
-        fetch("https://jsonplaceholder.typicode.com/users")
+        const url = ApiConfig.apiurl + ApiConfig.retrievalendpoint;
+        fetch(url)
           .then(response => response.json())
           .then(
             (userList) => {
