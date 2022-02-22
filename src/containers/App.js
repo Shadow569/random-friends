@@ -27,16 +27,15 @@ class App extends Component {
         this.setState({searchfield: event.target.value});
     }
     render(){
-        const filteredMalakes = this.state.robots.filter(robots => {
-            return robots.name.toLowerCase().startsWith(this.state.searchfield.toLowerCase());
+        const { robots, searchfield } = this.state;
+        const filteredMalakes = robots.filter(user => {
+            return user.name.toLowerCase().startsWith(searchfield.toLowerCase());
         });
-        if(this.state.robots.length == 0){
-            return (
+        return !robots.length ?
+            (
                 <h1 className="tc">Please wait..</h1>
-            )
-        }
-        else{
-            return (
+            ) :
+            (
                 <div className="tc">
                     <h1 className="f2"><a href='http://localhost:3000/'>My Random Friends</a></h1>
                     <SearchBox searchChange={this.onSearchChange} />
@@ -45,7 +44,6 @@ class App extends Component {
                     </Scroll>    
                 </div>    
             )
-        }
     }
 }
 
