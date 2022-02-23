@@ -14,10 +14,6 @@ const App = () => {
         setSearchfield(event.target.value);
     }
 
-    const filtered = friends.filter(user => {
-        return user.name.toLowerCase().startsWith(searchfield.toLowerCase());
-    });
-
     useEffect(() => {
         const url = ApiConfig.apiurl + ApiConfig.retrievalendpoint; //create an ApiConfig.js inside the src folder and populate it with your credentials and pass them along to the actual parameters required by your api provider to make the request
         fetch(url)
@@ -28,6 +24,10 @@ const App = () => {
             }
           );
     })
+
+    const filtered = friends.filter(user => {
+        return user.name.toLowerCase().startsWith(searchfield.toLowerCase());
+    });
     
     return !friends.length ?
         (
