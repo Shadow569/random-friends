@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import CardList from "../components/CardList";
 import SearchBox from '../components/SearchBox'
 import Scroll from "../components/Scroll";
+import ErrorBoundary from "../components/ErrorBoundary";
 import './App.css';
 import { ApiConfig } from "../ApiConfig";
 
@@ -42,7 +43,9 @@ class App extends Component {
                     <h1 className="f2"><a href='http://localhost:3000/'>My Random Friends</a></h1>
                     <SearchBox searchChange={this.onSearchChange} />
                     <Scroll>
-                        <CardList robots={filteredMalakes} />
+                        <ErrorBoundary>
+                            <CardList robots={filteredMalakes} />
+                        </ErrorBoundary>
                     </Scroll>    
                 </div>    
             )
