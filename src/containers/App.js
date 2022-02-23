@@ -14,7 +14,7 @@ class App extends Component {
         }
     }
     componentDidMount() {
-        const url = ApiConfig.apiurl + ApiConfig.retrievalendpoint;
+        const url = ApiConfig.apiurl + ApiConfig.retrievalendpoint; //create an ApiConfig.js inside the src folder and populate it with your credentials and pass them along to the actual parameters required by your api provider to make the request
         fetch(url)
           .then(response => response.json())
           .then(
