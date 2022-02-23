@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/react-ive--friends-project/static/css/main.d56ecb28.css",
+    "main.js": "/react-ive--friends-project/static/js/main.1245997f.js",
+    "static/js/787.90b7f0d2.chunk.js": "/react-ive--friends-project/static/js/787.90b7f0d2.chunk.js",
+    "static/media/SEGA.woff": "/react-ive--friends-project/static/media/SEGA.47b4bfa94ef243af4a5b.woff",
+    "index.html": "/react-ive--friends-project/index.html",
+    "main.d56ecb28.css.map": "/react-ive--friends-project/static/css/main.d56ecb28.css.map",
+    "main.1245997f.js.map": "/react-ive--friends-project/static/js/main.1245997f.js.map",
+    "787.90b7f0d2.chunk.js.map": "/react-ive--friends-project/static/js/787.90b7f0d2.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d56ecb28.css",
+    "static/js/main.1245997f.js"
+  ]
+}
