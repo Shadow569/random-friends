@@ -6,7 +6,7 @@ import ErrorBoundary from "../components/ErrorBoundary";
 import './App.css';
 import { ApiConfig } from "../ApiConfig";
 
-const App = () => {
+function App() {
     const [friends, setFriends] = useState([]);
     const [searchfield, setSearchfield] = useState('');
     const [loaded, setIsLoaded] = useState(false);
