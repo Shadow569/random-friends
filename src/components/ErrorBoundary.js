@@ -18,7 +18,7 @@ class ErrorBoundary extends Component{
         if(this.state.hasError){
             return (
                 <div className="flex items-center justify-center">
-                    <div className="pa2 bg-washed-red red shadow-4 w-80 f2 ma2 bl bw2 b--dark-red">
+                    <div className="pa2 bg-washed-red red shadow-2 w-50 f3 ma2 br2 bl bw2 b--dark-red">
                         <span class="lh-title ml3">{this.state.message}</span>
                     </div>
                 </div>
