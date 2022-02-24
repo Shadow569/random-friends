@@ -16,7 +16,13 @@ class ErrorBoundary extends Component{
 
     render(){
         if(this.state.hasError){
-            return <h1>{ this.state.message }</h1>
+            return (
+                <div className="flex items-center justify-center">
+                    <div className="pa2 bg-washed-red red shadow-4 w-80 f2 ma2 bl bw2 b--dark-red">
+                        <span class="lh-title ml3">{this.state.message}</span>
+                    </div>
+                </div>
+            )
         }
         return this.props.children;
     }
